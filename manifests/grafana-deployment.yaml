@@ -166,7 +166,6 @@ spec:
           readOnly: false
       nodeSelector:
         kubernetes.io/os: linux
-        monitoring: primary
       securityContext:
         fsGroup: 65534
         runAsNonRoot: true
@@ -175,7 +174,7 @@ spec:
       volumes:
       - name: persist
         persistentVolumeClaim:
-          claimName: grafana-lfs
+          claimName: grafana-longhorn
       - name: grafana-datasources
         secret:
           secretName: grafana-datasources
